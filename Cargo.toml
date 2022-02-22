@@ -1,0 +1,52 @@
+[package]
+name = "ethereum"
+version = "0.9.0"
+license = "Apache-2.0"
+authors = ["Wei Tang <hi@that.world>"]
+description = "Core block and transaction types for Ethereum."
+repository = "https://github.com/rust-blockchain/ethereum"
+keywords = ["no_std", "ethereum"]
+edition = "2018"
+
+[dependencies]
+ethereum-types = { git = "https://github.com/axia-tech/axia-common", branch = "master", version = "0.12.1", default-features = false, features = [
+	"rlp", "codec",
+] }
+rlp = { git = "https://github.com/axia-tech/axia-common", branch = "master", version = "0.5", default-features = false }
+codec = { git = "https://github.com/axia-tech/axia-scale-codec", branch = "v2.3.1", package = "axia-scale-codec", optional = true, default-features = false, features = [
+	"derive",
+], version = "2.3.1" }
+serde = { version = "1.0", optional = true, default-features = false, features = [
+	"derive",
+] }
+bytes = { version = "1.0", default-features = false }
+rlp-derive = "0.1"
+sha3 = { version = "0.9", default-features = false }
+triehash = { version = "0.8", default-features = false }
+hash256-std-hasher = { version = "0.15", default-features = false }
+hash-db = { version = "0.15", default-features = false }
+scale-info = { git = "https://github.com/axia-tech/scale-info", branch = "v1.0.0", version = "1.0.0", default-features = false, features = ["derive"], optional = true}
+
+[dev-dependencies]
+rand = "0.8"
+hex-literal = "0.3"
+
+[features]
+default = ["std"]
+with-codec = ["codec", "scale-info", "ethereum-types/codec"]
+with-serde = ["serde", "ethereum-types/serialize"]
+std = [
+	"ethereum-types/std",
+	"rlp/std",
+	"codec/std",
+	"serde/std",
+	"bytes/std",
+	"sha3/std",
+	"triehash/std",
+	"hash256-std-hasher/std",
+	"hash-db/std",
+	"scale-info/std",
+]
+
+[workspace]
+members = []
