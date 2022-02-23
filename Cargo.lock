@@ -113,7 +113,7 @@ dependencies = [
 [[package]]
 name = "ethbloom"
 version = "0.11.1"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "git+https://github.com/axia-tech/axia-common?branch=master#b691d69b22f3b8a7a0628033ea1a9abcbbb28b8e"
 dependencies = [
  "crunchy",
  "fixed-hash",
@@ -135,7 +135,7 @@ dependencies = [
  "hash256-std-hasher",
  "hex-literal",
  "rand",
- "rlp 0.5.1 (git+https://github.com/axia-tech/axia-common?branch=master)",
+ "rlp",
  "rlp-derive",
  "scale-info",
  "serde",
@@ -146,7 +146,7 @@ dependencies = [
 [[package]]
 name = "ethereum-types"
 version = "0.12.1"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "git+https://github.com/axia-tech/axia-common?branch=master#b691d69b22f3b8a7a0628033ea1a9abcbbb28b8e"
 dependencies = [
  "ethbloom",
  "fixed-hash",
@@ -161,7 +161,7 @@ dependencies = [
 [[package]]
 name = "fixed-hash"
 version = "0.7.0"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "git+https://github.com/axia-tech/axia-common?branch=master#b691d69b22f3b8a7a0628033ea1a9abcbbb28b8e"
 dependencies = [
  "byteorder",
  "rand",
@@ -226,7 +226,7 @@ checksum = "7ebdb29d2ea9ed0083cd8cece49bbd968021bd99b0849edb4a9a7ee0fdf6a4e0"
 [[package]]
 name = "impl-codec"
 version = "0.5.1"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "git+https://github.com/axia-tech/axia-common?branch=master#b691d69b22f3b8a7a0628033ea1a9abcbbb28b8e"
 dependencies = [
  "axia-scale-codec",
 ]
@@ -234,15 +234,15 @@ dependencies = [
 [[package]]
 name = "impl-rlp"
 version = "0.3.0"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "git+https://github.com/axia-tech/axia-common?branch=master#b691d69b22f3b8a7a0628033ea1a9abcbbb28b8e"
 dependencies = [
- "rlp 0.5.1 (git+https://github.com/axia-tech/axia-common?branch=master)",
+ "rlp",
 ]
 
 [[package]]
 name = "impl-serde"
 version = "0.3.2"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "git+https://github.com/axia-tech/axia-common?branch=master#b691d69b22f3b8a7a0628033ea1a9abcbbb28b8e"
 dependencies = [
  "serde",
 ]
@@ -285,7 +285,7 @@ checksum = "eb9f9e6e233e5c4a35559a617bf40a4ec447db2e84c20b55a6f83167b7e57872"
 [[package]]
 name = "primitive-types"
 version = "0.10.1"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "git+https://github.com/axia-tech/axia-common?branch=master#b691d69b22f3b8a7a0628033ea1a9abcbbb28b8e"
 dependencies = [
  "fixed-hash",
  "impl-codec",
@@ -362,17 +362,7 @@ dependencies = [
 [[package]]
 name = "rlp"
 version = "0.5.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "999508abb0ae792aabed2460c45b89106d97fe4adac593bdaef433c2605847b5"
-dependencies = [
- "bytes",
- "rustc-hex",
-]
-
-[[package]]
-name = "rlp"
-version = "0.5.1"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "git+https://github.com/axia-tech/axia-common?branch=master#b691d69b22f3b8a7a0628033ea1a9abcbbb28b8e"
 dependencies = [
  "bytes",
  "rustc-hex",
@@ -514,11 +504,10 @@ dependencies = [
 [[package]]
 name = "triehash"
 version = "0.8.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a1631b201eb031b563d2e85ca18ec8092508e262a3196ce9bd10a67ec87b9f5c"
+source = "git+https://github.com/axia-tech/axia-common?branch=master#b691d69b22f3b8a7a0628033ea1a9abcbbb28b8e"
 dependencies = [
  "hash-db",
- "rlp 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rlp",
 ]
 
 [[package]]
@@ -530,7 +519,7 @@ checksum = "dcf81ac59edc17cc8697ff311e8f5ef2d99fcbd9817b34cec66f90b6c3dfd987"
 [[package]]
 name = "uint"
 version = "0.9.1"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "git+https://github.com/axia-tech/axia-common?branch=master#b691d69b22f3b8a7a0628033ea1a9abcbbb28b8e"
 dependencies = [
  "byteorder",
  "crunchy",
